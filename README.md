@@ -1,1 +1,1 @@
-Thiss is a testt repo for AutoPR.
+This is a test repo for AutoPR.
