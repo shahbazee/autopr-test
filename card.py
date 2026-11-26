@@ -19,7 +19,7 @@ class ShoppingCart:
     def total(self):
         amount = 0
         for item in self.items:
-            amount += item["price"]
+            amount += item["price"] * item["quantity"]
         return amount
 
     def apply_discount(self, percent):
