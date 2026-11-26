@@ -33,5 +33,16 @@ class ShoppingCart:
             count += item["quantity"]
         return count
 
+    def get_most_expensive_item(self):
+        """
+        Return the name of the item with the highest unit price.
+        If the cart is empty, return None.
+        """
+        if not self.items:
+            return None
+        # Find the item with the maximum price
+        most_expensive = max(self.items, key=lambda i: i["price"])
+        return most_expensive["name"]
+
     def clear(self):
         self.items = []
