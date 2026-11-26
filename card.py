@@ -3,6 +3,9 @@ class ShoppingCart:
         self.items = []
 
     def add_item(self, name, price, quantity=1):
+        # Reject negative prices
+        if price < 0:
+            raise ValueError("Price cannot be negative.")
         for item in self.items:
             if item["name"] == name:
                 item["quantity"] += quantity
